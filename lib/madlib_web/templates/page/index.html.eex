@@ -1,4 +1,6 @@
 <section class="phx-hero">
-  <h1>The story of Little Red Riding Hood</h1>
-  <p>One upon a time</p>
+  <h1>The story of Little <%= @name_color %> Riding Hood</h1>
+  <p>One upon a time, there was a girl named Little <%= @name_color %> Riding Hood.</p>
+  <p>Her mother asked her to take to take a basket of food containing <%= Faker.Food.description() %> To her <%= person_adjective() %> grandmother who was sick in bed.</p>
+  <p>She started walking along the <%= road_adjective() %> path, through the <%= geography() %> when suddenly the big bad <%= animal() %> jumped in her way.</p>
 </section>
