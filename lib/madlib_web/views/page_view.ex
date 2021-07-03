@@ -12,7 +12,7 @@ defmodule MadlibWeb.PageView do
   end
 
   defp geography() do
-    ~w(woods prairy forest city town country farmland beach mountains)
+    ~w(woods prairie forest city town country farmland beach mountains)
     |> Enum.random()
   end
 
