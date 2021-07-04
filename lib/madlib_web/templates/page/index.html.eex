@@ -1,6 +1,11 @@
 <section class="phx-hero">
   <h1>The story of Little <%= @name_color %> Riding Hood</h1>
-  <p>One upon a time, there was a girl named Little <%= @name_color %> Riding Hood.</p>
-  <p>Her mother asked her to take to take a basket of food containing <%= Faker.Food.description() %> To her <%= person_adjective() %> grandmother who was sick in bed.</p>
-  <p>She started walking along the <%= road_adjective() %> path, through the <%= geography() %> when suddenly the big bad <%= animal() %> jumped in her way.</p>
+  <p>Once upon a time, there was a girl named Little <%= @name_color %> Riding Hood.</p>
+  <p>Her mother asked her to take to take a basket of food containing <%= Faker.Food.description() |> String.replace("your", "her") %> To her <%= person_adjective() %> grandmother who was sick in bed.</p>
+  <p>She started walking along the <%= road_adjective() %> path, through the <%= @geography %> when suddenly the big bad <%= @animal %> jumped in her way.</p>
+  <p>"Where are you going?", said the <%= @animal %></p>
+  <p>"I am taking this basket of food to my sick grandmother", said Little <%= @name_color %> Riding Hood</p>
+  <p>"Where does your grandmother live?", said the <%= @animal %></p>
+  <p>"She lives at <%= Faker.Address.street_address() %> st. on the other side of the <%= @geography %>", said Little <%= @name_color %> Riding Hood</p>
+
 </section>
